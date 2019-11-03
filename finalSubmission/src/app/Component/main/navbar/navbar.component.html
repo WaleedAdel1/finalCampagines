@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+    <a href="/" class="navbar-brand d-flex mr-auto ml-5 mr-5">
+      <img src="" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="collapsingNavbar">
+        <ul class="navbar-nav justify-content-start">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/Campagines']" routerLinkActive="router-link-active" >Campagines</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Charities</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Winners</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-bell"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/cart']" routerLinkActive="router-link-active" >
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge">{{cartItemCount}}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="far fa-user"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

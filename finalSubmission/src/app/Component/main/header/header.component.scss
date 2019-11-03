@@ -1,0 +1,82 @@
+$redColor:#EC2326;
+$whiteColor: #FFF;
+$grayColor: #777777;
+
+.container-fluid {
+  background-color: $redColor;
+  .row {
+    .container {
+      // margin-left: 0;
+      // margin-right: 0;
+      .topcontainerdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        .select {
+          select {
+            border: none;
+            -webkit-appearance: button;
+            appearance: button;
+            background-color: $redColor;
+            color: $whiteColor;
+            outline: none;
+            width: 235px;
+            position: relative;
+            display: table-row;
+
+          }
+          select:focus {
+            border: none;
+            box-shadow: none;
+          }
+          select:hover {
+            background-color: $redColor;
+            color: $whiteColor;
+          }
+        }
+        .select::before {
+          content: "\f13a";
+          font-family: FontAwesome;
+          color: $whiteColor;
+          background-color: $grayColor;
+          pointer-events: none;
+          left: 295px;
+          position: relative;
+          border-radius: 15px;
+          font-size: 20px;
+          border: none;
+
+        }
+
+
+
+        }
+
+          span {
+            color: $whiteColor;
+          }
+          .LanguageSpan {
+            cursor: pointer;
+          }
+
+      }
+  }
+}
+
+// @media(max-width: 780){
+//   .select::before {
+//     content: "\f13a";
+//     font-family: FontAwesome;
+//     color: $whiteColor;
+//     background-color: yellow; // $grayColor;
+//     pointer-events: none;
+//     left: 295px;
+//     position: relative;
+//     border-radius: 15px;
+//     font-size: 20px;
+//     border: none;
+
+//   }
+// }
+

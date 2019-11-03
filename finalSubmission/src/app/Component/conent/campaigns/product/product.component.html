@@ -1,0 +1,55 @@
+<div class="mt-2 card" [ngStyle]="{'background-color': product.status === 4 ? '#adacac' : '#f5f5f5'}">
+  <img [src]="product.img" alt="Denim Jeans"
+    [ngStyle]="{'background-color': product.status === 4 ? '#adacac' : '#gainsboro'}">
+  <span class="spanForNewProduct" *ngIf="product.status === 2">New</span>
+  <div class="containerOfProgressAndQuantity"
+    [ngStyle]="{'background-color': product.status === 4 ? '#adacac' : '#f5f5f5'}">
+    <p class="mt-2 mb-1">
+      <span class="remainQuantityOfProducts">200</span>
+      <span class="soldOutOfSpan"> SOLD OUT OF </span>
+      <span class="allQuantityOfProducts">255</span>
+    </p>
+    <div class="progress mb-2" [ngSwitch]="product.status">
+      <div class="progress-bar closingProgress" *ngSwitchCase="1"></div>
+      <div class="progress-bar exploreProgress" *ngSwitchCase="2"></div>
+      <div class="progress-bar mediumSellingProgress" *ngSwitchCase="3"></div>
+      <div class="progress-bar soldProgress" *ngSwitchCase="4"></div>
+    </div>
+    <div class="mt-3 ml-3 text-left containerOfName">
+      <h5>{{product.name}}</h5>
+      <p class="mb-0 getChanceParagraph">get a chance to <span class="spanWin">win</span> :</p>
+      <p class="getChanceParagraph">ARMOR BLU</p>
+    </div>
+    <div class="text-left ml-3 mr-3 containerOfPrice">
+      <span class="priceForCurrency" [ngSwitch]="currencyId">
+        <span *ngSwitchCase="1">{{product.price / 18 | currency: "USD":true}}</span>
+        <span *ngSwitchCase="2">{{product.price |currency: "EGP":"symbol"}}</span>
+        <span *ngSwitchCase="3">{{product.price / 20 | currency: "EUR":"symbol"}}</span>
+        <span *ngSwitchCase="4">{{product.price / 60 | currency: "ITL":"symbol"}} </span>
+      </span>
+
+      <span>
+        <span class="mr-2 spanHeart" id="heart" (click)="favourite =! favourite"
+          [ngStyle]="{'color':favourite === false ? 'gainsboro' : 'red' }">
+          <i class="fas fa-heart" ></i>
+        </span>
+        <span id="Socail" (click)="IsHidden =! IsHidden">
+          <i class="fas fa-share-alt"></i>
+        </span>
+      </span>
+    </div>
+    <div [hidden]="IsHidden" class="socialDiv">
+      <share-buttons [theme]="'circles-dark'" [include]="['facebook','twitter','linkedin','google','pinterest']"
+        [show]="5" [size]="-4" [url]="'http://localhost:4200/Campagines'" [autoSetMeta]="false"></share-buttons>
+    </div>
+
+    <div class="mt-3 mb-2 containerButtons" *ngIf="product.status !== 4">
+      <button class="text-center detailsButton">Prize details</button>
+      <button type="button" class="text-center addToCartbutton" (click)="addToCart(product)">Add To Cart</button>
+    </div>
+  </div>
+
+  <div class="mt-3 mb-4 containerSoldOut" *ngIf="product.status === 4">
+    <span>Draw Data : 9 September 2019 </span>
+  </div>
+</div>

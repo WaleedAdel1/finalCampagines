@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="container">
+      <div class="topcontainerdiv">
+        <div class="select">
+          <span>Currency:</span>
+          <select id="currency" class="form-control" name="currency" [(ngModel)]="selectedCurrency"
+            (click)="changeCurrency()">
+            <option *ngFor="let cur of currency" [value]="cur.id">
+              {{cur.name}}
+            </option>
+          </select>
+        </div>
+        <div>
+          <span class="LanguageSpan" id="changeLanguages">
+            العربية
+          </span>
+          <span class="ml-1">Help Center</span>
+        </div>
+        <!-- <div class="select" >
+              <span>Currency: </span>
+              <select class="selectCurrency">
+                <option class="currencyOptions" value="usd">USD - United States Dollar </option>
+                <option value="egp">EGP - Egyptian Pound</option>
+              </select>
+            </div> -->
+
+
+      </div>
+    </div>
+  </div>
+</div>
+

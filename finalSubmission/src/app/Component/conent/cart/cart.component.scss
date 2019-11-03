@@ -1,0 +1,43 @@
+$grayColor: #777777;
+$redColor: #EC2326;
+$darkColor: #231F20;
+$whiteColor: #FFF;
+
+h1 {
+  color: $grayColor;
+
+  span {
+    color: $redColor;
+  }
+}
+.container{
+  .row {
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+      img {
+        width: 100%;
+        background-color: gainsboro;
+      }
+      .form-inline {
+        justify-content: center;
+      }
+      h4 {
+        background-color: gainsboro;
+        padding: 10px 0;
+      }
+
+      }
+      .containerOfName {
+        h5{
+          font-weight: bold;
+        }
+
+      }
+     }
+
+  }
+

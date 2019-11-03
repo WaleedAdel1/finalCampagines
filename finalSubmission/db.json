@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Grey Jacket",
+      "price": 300,
+      "quantity": 20,
+      "img": "assets/images/product.png",
+      "currency": "Dolar",
+      "status": 1
+    },
+    {
+      "id": 2,
+      "name": "Grey Jacket",
+      "price": 700,
+      "quantity": 20,
+      "img": "assets/images/product.png",
+      "currency": "Dolar",
+      "status": 2
+    },
+    {
+      "id": 3,
+      "name": "Grey Jacket",
+      "price": 900,
+      "quantity": 20,
+      "img": "assets/images/product.png",
+      "currency": "Dolar",
+      "status": 3
+    },
+    {
+      "id": 4,
+      "name": "Grey Jacket",
+      "price": 150,
+      "quantity": 50,
+      "img": "assets/images/product.png",
+      "currency": "Dolar",
+      "status": 4
+    },
+    {
+      "id": 5,
+      "name": "Grey Jacket",
+      "price": 720,
+      "quantity": 40,
+      "img": "assets/images/product.png",
+      "currency": "Dolar",
+      "status": 2
+    },
+    {
+      "id": 6,
+      "name": "Grey Jacket",
+      "price": 650,
+      "quantity": 30,
+      "img": "assets/images/product.png",
+      "currency": "Dolar",
+      "status": 2
+    },
+    {
+      "id": 7,
+      "name": "Grey Jacket",
+      "price": 450,
+      "quantity": 34,
+      "img": "assets/images/product.png",
+      "currency": "Dolar",
+      "status": 4
+    }
+  ],
+  "currency": [
+    {
+      "id": 1,
+      "name": "USD - United States Dollar"
+    },
+    {
+      "id": 2,
+      "name": "EGP - Egyptian Pound"
+    },
+    {
+      "id": 3,
+      "name": "Euro - CFP franc"
+    },
+    {
+      "id": 4,
+      "name": "Lira - Italian lira Currency"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="row  ml-4">
+    <div class="col-12 mb-2">
+      <h3>Campaings</h3>
+    </div>
+    <div class="ml-3 buttonsFilter">
+      <button class="text-center btn" (click)="ClosingSoon()">Closing Soon</button>
+      <button class="text-center ml-2 mr-2 btn" (click)="Explore()">Explore</button>
+      <button class="text-center btn" (click)="SoldOut()">Sold Out</button>
+    </div>
+    <div class="col-12 mt-3">
+        <div *ngIf="Sold"><span class="filteredProductTypeSpan"> {{filteredProductType}}</span>  <span class="filteredProductLengthSpan"> ( {{filteredProductLength}} campaign )</span></div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4 mt-2 mb-2" *ngFor="let prod of filterProduct">
+      <app-product [product]="prod"></app-product>
+    </div>
+  </div>
+</div>
+

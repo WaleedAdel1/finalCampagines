@@ -1,0 +1,33 @@
+$yellowColor: #FCC113;
+$blackColor: #000;
+nav {
+  #collapsingNavbar{
+    ul {
+      li {
+        .router-link-active{
+          color: $yellowColor;
+        }
+        .router-link-active:after {
+          content: "\25CF";
+          display: block;
+          opacity: 1;
+          text-align: center;
+        }
+        a {
+          font-weight: bold;
+          color:  $blackColor;
+          img {
+            width: 20px;
+          }
+          .badge {
+            padding: 3px 5px;
+            border-radius: 50%;
+            background-color: $yellowColor;
+            color: white;
+          }
+        }
+      }
+    }
+
+  }
+}
